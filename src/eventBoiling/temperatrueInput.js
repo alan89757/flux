@@ -25,6 +25,7 @@ class TemperatureInput extends Component {
     })
   }
   componentDidMount() {
+    this.action.getAll(); // 数据初始化
     // 监听用户输入change
     this.props.store.on('temp change', (data)=> {
       const obj = data['temp change'];
